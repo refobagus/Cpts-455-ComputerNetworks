@@ -1,0 +1,8 @@
+How to run this code:
+
+1. open 3 terminal on this dir
+2. on terminal 1, cd to pox and run command ./pox.py log.level --DEBUG misc.proj4_455
+3. run sudo mn -c on terminal 2, then run sudo mn --mac --switch ovsk --controller remote,port=(port number from ./pox.py output)
+4. on mn, run xterm h1 h2
+5. run ./server_udp output.txt on h2, and ./client_udp 10.0.0.2 tux.txt on h1
+6. on terminal 3, run command diff output.txt tux.txt. If no output, then project run correctly. cat output.txt to check
